@@ -1,21 +1,12 @@
 import express from "express"
+import ProductController from "../controllers/ProductController.js"
 
-export const productRoutes=express.Router()
+export const productRoutes = express.Router()
 
-productRoutes.get("/",(req, res)=>{
-    res.send("getAllProducts")
-})
-productRoutes.get("/:id",(req, res)=>{
-    res.send({getProductById:req.params.id})
-})
+productRoutes.get("/", ProductController.getAllProducts)
+productRoutes.get("/:id", ProductController.getProductById)
 
-productRoutes.post("/",(req, res)=>{
-    res.send("crateProduct")
-})
-productRoutes.put("/",(req, res)=>{
-    res.send("updateProduct")
-})
-productRoutes.delete("/",(req, res)=>{
-    res.send("deleteProduct")
-})
-
+productRoutes.get("/getproductbyupdate/:id", ProductController.getProductByUpdate)
+productRoutes.post("/", ProductController.createPoduct)
+productRoutes.put("/:id", ProductController.updatePoduct)
+productRoutes.delete("/:id", ProductController.deletePoduct)

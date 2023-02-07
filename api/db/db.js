@@ -9,7 +9,7 @@ const dbHost = process.env.DB_HOST
 const db = new Sequelize(dbName, dbUserName, dbPassword, {
   host: dbHost,
   dialect: "mysql",
-  port: dbPort
+  port: 3306
 })
 try {
   await db.authenticate();
