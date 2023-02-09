@@ -13,34 +13,28 @@ export const products = createApi({
         getProductByUpdate: builder.query({
             query: (id) => `/getproductbyupdate/${id}`,
         }),
-        createPoduct: builder.mutation({
-            query: () => ({
-                query: (body) => ({
-                    url: ``,
-                    method: "POST",
-                    body,
-                }),
-                invalidatesTags: ["Products"],
+        createProduct: builder.mutation({
+            query: (body) => ({
+                url: ``,
+                method: "POST",
+                body,
             }),
+            invalidatesTags: ["Products"],
         }),
-        updatePoduct: builder.mutation({
-            query: () => ({
-                query: ({ id, ...body }) => ({
-                    url: `/${id}`,
-                    method: "PUT",
-                    body,
-                }),
-                invalidatesTags: ["Products"],
+        updateProduct: builder.mutation({
+            query: ({ id, ...body }) => ({
+                url: `/${id}`,
+                method: "PUT",
+                body,
             }),
+            invalidatesTags: ["Products"],
         }),
-        deletePoduct: builder.mutation({
-            query: () => ({
-                query: (id) => ({
-                    url: `/${id}`,
-                    method: "DELETE",
-                }),
-                invalidatesTags: ["Products"],
+        deleteProduct: builder.mutation({
+            query: (id) => ({
+                url: `/${id}`,
+                method: "DELETE",
             }),
+            invalidatesTags: ["Products"],
         }),
     }),
 });
@@ -49,7 +43,7 @@ export const {
     useGetAllProductsQuery,
     useGetProductByIdQuery,
     useGetProductByUpdateQuery,
-    useCreatePoductMutation,
-    useUpdatePoductMutation,
-    useDeletePoductMutation,
+    useCreateProductMutation,
+    useUpdateProductMutation,
+    useDeleteProductMutation,
 } = products;

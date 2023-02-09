@@ -4,7 +4,7 @@ const CreateCategory = () => {
     const [data] = useCreateCategoryMutation();
     const handleClick = () => {
         data({
-            name: "Papas fritas",
+            name: "tacos",
         });
     };
     return (

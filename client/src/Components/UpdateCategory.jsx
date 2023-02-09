@@ -5,7 +5,7 @@ const UpdateCategory = () => {
     const handleClick = () => {
         data({
             id: 1,
-            name: "enchiladas"
+            name: "tortas"
         });
     };
     return (
