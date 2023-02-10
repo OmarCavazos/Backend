@@ -15,7 +15,7 @@ app.use(morgan('tiny'))
 
 app.use("/api", routes)
 
-await db.sync({ force: false}).then(() => {
+await db.sync({ force: false }).then(() => {
     app.listen(port, () => {
         console.log("servidor ok ")
     })

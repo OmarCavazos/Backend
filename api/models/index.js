@@ -10,4 +10,6 @@ Category.hasMany(Product, {
 })
 Product.belongsTo(Category)
 
+
+
 export { Category, Product, User }
