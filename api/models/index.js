@@ -10,6 +10,9 @@ Category.hasMany(Product, {
 })
 Product.belongsTo(Category)
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> ca844db0d093b7eb12b6f8f7c5446eb1a75f2894
 export { Category, Product, User }

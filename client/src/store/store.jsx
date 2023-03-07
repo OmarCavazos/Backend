@@ -4,6 +4,7 @@ import { products } from "./service/productService";
 import { users } from "./service/userService";
 
 export const store = configureStore({
+<<<<<<< HEAD
     reducer: {
         [categories.reducerPath]: categories.reducer,
         [products.reducerPath]: products.reducer,
@@ -15,3 +16,16 @@ export const store = configureStore({
             .concat(products.middleware)
             .concat(users.middleware),
 });
+=======
+  reducer: {
+    [categories.reducerPath]: categories.reducer,
+    [products.reducerPath]: products.reducer,
+    [users.reducerPath]: users.reducer,
+  },
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware()
+      .concat(categories.middleware)
+      .concat(products.middleware)
+      .concat(users.middleware),
+});
+>>>>>>> ca844db0d093b7eb12b6f8f7c5446eb1a75f2894

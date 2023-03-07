@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import CreateCategory from "./Components/CreateCategory";
 import DeleteCategory from "./Components/DeleteCategory";
 import GetAllCategories from "./Components/GetAllCategories";
@@ -28,8 +29,28 @@ function App() {
       <hr />
       <br />
       {/* <GetAllProducts /> */}
+=======
+import Footer from "./Components/Footer";
+import Header from "./Components/Header";
+import Main from "./Components/Main";
+import { useMeQuery } from "./store/service/userService";
+
+
+function App() {
+  // const {data}=useMeQuery()
+  // console.log("🚀 ~ file: Isadmin.jsx:7 ~ Isadmin ~ me", data)
+  return (
+    <>
+      <Header />
+      <Main />
+      <Footer />
+>>>>>>> ca844db0d093b7eb12b6f8f7c5446eb1a75f2894
     </>
   );
 }
 
+<<<<<<< HEAD
 export default App;
+=======
+export default App;
+>>>>>>> ca844db0d093b7eb12b6f8f7c5446eb1a75f2894
